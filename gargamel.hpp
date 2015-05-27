@@ -5,11 +5,10 @@ using namespace std;
 
 class gargamel
 {
-	
 private:
 	int x;
 	int y;
-	
+
 public:
 	gargamel()
 	{
@@ -20,8 +19,25 @@ public:
 
 	void changeDir()
 	{
-	x += (rand() % 3) * ( rand() %3 == 0 ? -1:1};
-	y += (rand() % 3) * ( rand() %3 == 0 ? -1:1};	
-	}		
+	x += (rand() % 3) * ( rand() %3 == 0 ? -1 : 1};
+	y += (rand() % 3) * ( rand() %3 == 0 ? -1 : 1};
+	}
+
+	void fun()
+	{
+	    if(x<0 || x>256)
+        {
+            x=128;
+            y=128;
+            return;
+        }
+
+        if(y<0 || y>256)
+        {
+            x=128;
+            y=128;
+            return;
+        }
+	}
 };
 
