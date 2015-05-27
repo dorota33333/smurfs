@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <ctime>
 using namespace std;
 
 class klakier
@@ -7,7 +8,7 @@ class klakier
  	 int x;
 	 int y;
 	 int xVelocity;
-	 int yVelocity;	
+	 int yVelocity;
 public:
 	klakier()
 	{
@@ -17,7 +18,7 @@ public:
 	}
 	~`klakier();
 
-	
+
 	void changeDir()
 	{
 		x += (rand() % 5) * ( rand() % 5 == 0 ? -1:1);
@@ -35,9 +36,9 @@ public:
 			y = 128;
 		 	return;
 		}
-			
-	
-	
+
+
+
 	}
 
 
