@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+class Smurf () { 
+private:
+	int xAxis;
+	int yAxis;
+public:
+	Smurf () {
+		srand(time(NULL));
+		xAxis = rand() % 256;
+		yAxis = rand() % 256;
+	}
+	void changeDir() {
+		xAxis += (rand() % 2) * (rand() % 2 == 0 ? -1 : 1);
+		yAxis += (rand() % 2) * (rand() % 2 == 0 ? -1 : 1);
+	}
+	bool isAbroad() {
+		if (xAxis > 256 || xAxis < 0) 
+			return true;
+		if (yAxis > 256 || yAxis < 0)
+			return true;
+		return false;
+	}
+	
+};
